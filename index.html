@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="VELOOP Rewards — Data Analyst Internship Task 01 analytics blueprint dashboard." />
+  <title>VELOOP Rewards — Task 01 Analytics Blueprint</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">V</div>
+        <div>
+          <strong>VELOOP</strong>
+          <span>Rewards Analytics</span>
+        </div>
+      </div>
+      <div class="nav-label">Analytics</div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="overview">Overview</button>
+        <button class="nav-item" data-view="users">Users</button>
+        <button class="nav-item" data-view="engagement">Engagement</button>
+        <button class="nav-item" data-view="rewards">Rewards</button>
+        <button class="nav-item" data-view="wallet">Wallet</button>
+        <button class="nav-item" data-view="withdrawals">Withdrawals</button>
+        <button class="nav-item" data-view="referrals">Referrals</button>
+        <button class="nav-item" data-view="quality">Data Quality</button>
+        <button class="nav-item" data-view="implementation">Implementation</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="sim-badge">SIMULATED ANALYTICAL TEST DATA</div>
+        <small>Made by Sai Sunil Gawaskar</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div>
+          <p class="eyebrow">DATA ANALYST INTERNSHIP — TASK 01</p>
+          <h1 id="pageTitle">Analytics Overview</h1>
+        </div>
+        <div class="top-actions">
+          <span class="status-chip">Blueprint Ready</span>
+          <a class="ghost-btn" href="docs/VELOOP_Task01_Final_Consolidated_Report.pdf" target="_blank">Final Report</a>
+          <a class="solid-btn" href="docs/VELOOP_Task01_Master_Analytics_Workbook.xlsx">Excel Workbook</a>
+        </div>
+      </header>
+
+      <div class="notice">
+        <strong>Data integrity:</strong> This site uses supplied user data plus clearly labelled simulated analytical testing datasets. It does not represent production VELOOP performance or company statistics.
+      </div>
+
+      <section class="view active" id="view-overview">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div>
+              <span class="pill">21 deliverables covered</span>
+              <h2>Product Analytics, Data Readiness &amp; Data Management Blueprint</h2>
+              <p>A student-style, engineering-readable analytics foundation designed around the Task 01 requirements.</p>
+            </div>
+            <div class="hero-meta">
+              <div><span>Prepared by</span><strong>Sai Sunil Gawaskar</strong></div>
+              <div><span>Scope</span><strong>Product + Data + Governance</strong></div>
+              <div><span>Primary status</span><strong>Prepared for implementation</strong></div>
+            </div>
+          </div>
+          <div class="hero-card compact">
+            <span class="pill neutral">Readiness</span>
+            <div class="big-score">4.0<span>/5</span></div>
+            <p>Overall analytical foundation assessment. Production instrumentation remains the main dependency.</p>
+            <div class="meter"><span style="width:80%"></span></div>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="overviewCards"></div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head"><div><h3>Dataset coverage</h3><p>Supplied + simulated analytical testing structure</p></div></div>
+            <canvas id="datasetChart" height="220"></canvas>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h3>Status mix</h3><p>Examples from simulated operational test data</p></div></div>
+            <canvas id="statusChart" height="220"></canvas>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div><h3>Implementation priorities</h3><p>Derived from the analytics readiness and backlog artifacts</p></div><button class="text-btn" data-view-jump="implementation">Open backlog →</button></div>
+          <div class="priority-list" id="priorityList"></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-users"><div id="usersContent"></div></section>
+      <section class="view" id="view-engagement"><div id="engagementContent"></div></section>
+      <section class="view" id="view-rewards"><div id="rewardsContent"></div></section>
+      <section class="view" id="view-wallet"><div id="walletContent"></div></section>
+      <section class="view" id="view-withdrawals"><div id="withdrawalsContent"></div></section>
+      <section class="view" id="view-referrals"><div id="referralsContent"></div></section>
+      <section class="view" id="view-quality"><div id="qualityContent"></div></section>
+      <section class="view" id="view-implementation"><div id="implementationContent"></div></section>
+
+      <footer>
+        <div>VELOOP Rewards — Task 01 Analytics Blueprint</div>
+        <div>Made by Sai Sunil Gawaskar</div>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
